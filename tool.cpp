@@ -10,6 +10,7 @@ using vvl = vector<vl>;
 using ql = queue<ll>;
 const double pi = 3.14159265359;
 const ll INF = 1000000000000000;
+const ll dif = 1000000007;
 #define rep(i, n) for (ll i = 0; i < (ll)(n); i++)
 #define rep2(i, n) for (ll i = 1; i <= (ll)(n); i++)
 #define rep3(i, s, n) for (ll i = (ll)(s); i < (ll)(n); i++)
@@ -22,6 +23,12 @@ template<class T> void chmin(T& a, T b) {
     if (a > b) a = b;
 }
 
+// 累乗
+ll myPow(ll x, ll n, ll m){
+  if (n == 0) return 1;
+  else if (n % 2 == 0) return myPow(x * x % m, n / 2, m);
+  else return x * myPow(x, n - 1, m) % m;
+}
 
 // 桁数
 ll ketasu(ll x) {
