@@ -24,4 +24,26 @@ template<class T> void chmin(T& a, T b) {
     if (a > b) a = b;
 }
 
-int main() {}
+int main() {
+    ll n;
+    cin >> n;
+
+    vl a(n);
+    rep(i, n) cin >> a[i];
+
+    vl vec(n);
+    rep(i, n) vec[i] = i - a[i];
+
+    ml mp;
+    rep(i, n) {
+        mp[vec[i]]++;
+    }
+
+    ll ans = 0;
+    rep(i, n) {
+        mp[vec[i]]--;
+        ans += mp[a[i] + i];
+    }
+
+    cout << ans << endl;
+}

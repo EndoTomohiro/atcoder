@@ -8,7 +8,6 @@ using vp = vector<pl>;
 using vs = vector<string>;
 using vvl = vector<vl>;
 using ql = queue<ll>;
-using ml = map<ll, ll>;
 const double pi = 3.14159265359;
 const ll INF = 1000000000000000;
 const ll dif = 1000000007;
@@ -24,4 +23,21 @@ template<class T> void chmin(T& a, T b) {
     if (a > b) a = b;
 }
 
-int main() {}
+int main() {
+    ll x;
+    cin >> x;
+
+    rep(a, 1000) rep(b, 1000) {
+        if (a * a * a * a * a - b * b * b * b * b == x) {
+            cout << a << ' ' << b << endl;
+            return 0;
+        }
+    }
+
+    rep(a, 1000) rep(b, 1000) {
+        if (a * a * a * a * a + b * b * b * b * b == x) {
+            cout << a << ' ' << -b << endl;
+            return 0;
+        }
+    }
+}

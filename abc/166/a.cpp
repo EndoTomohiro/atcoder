@@ -8,7 +8,6 @@ using vp = vector<pl>;
 using vs = vector<string>;
 using vvl = vector<vl>;
 using ql = queue<ll>;
-using ml = map<ll, ll>;
 const double pi = 3.14159265359;
 const ll INF = 1000000000000000;
 const ll dif = 1000000007;
@@ -24,4 +23,10 @@ template<class T> void chmin(T& a, T b) {
     if (a > b) a = b;
 }
 
-int main() {}
+int main() {
+    string s;
+    cin >> s;
+
+    if (s == "ABC") cout << "ARC" << endl;
+    else cout << "ABC" << endl;
+}
