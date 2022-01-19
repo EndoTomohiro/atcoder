@@ -70,7 +70,8 @@ int main() {
 
     // char型をll型に変換
     char c;
-    ll ll_c = c - '0';
+    ll num_c = c - '0';
+    ll char_c = c - 'a';
 
     // 切り上げ
     ll a, b;
