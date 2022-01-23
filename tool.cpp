@@ -125,7 +125,7 @@ int main() {
     ll c = count(all(vec), x);
 
     // 順序付き集合
-    set<int> st;
+    set<ll> st;
     st.insert(0);
 
     // 大きい順のキュー
