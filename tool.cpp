@@ -85,9 +85,10 @@ int main() {
     vl vec;
     sort(all(vec), greater<ll>());
 
-    // 配列の最大値
+    // 配列の最大値、和
     vl vec;
     ll max_range = *max_element(all(vec));
+    ll sum = accumulate(all(vec), 0);
 
     // 二分探索
     vl vec;
