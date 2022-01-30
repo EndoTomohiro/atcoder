@@ -9,6 +9,7 @@ using vs = vector<string>;
 using vvl = vector<vl>;
 using ql = queue<ll>;
 using ml = map<ll, ll>;
+using sl = set<ll>;
 const double pi = 3.14159265359;
 const ll INF = 1000000000000000;
 const ll dif = 1000000007;
