@@ -25,4 +25,34 @@ template<class T> void chmin(T& a, T b) {
     if (a > b) a = b;
 }
 
-int main() {}
+bool kaibun(string s) {
+    ll m = s.size() / 2;
+    rep(i, m) {
+        if (s[i] != s[s.size() - 1 - i]) return false;
+    }
+    return true;
+}
+
+int main() {
+    string s;
+    cin >> s;
+    ll l = 0, r = s.size() - 1;
+    while (s[l] == 'a') {
+        l++;
+        if (l >= r) {
+            puts("Yes");
+            return 0;
+        }
+    }
+    while (s[r] == 'a') r--;
+
+    ll cnt = s.size() - 1 - r;
+    if (l < cnt) {
+        string a;
+        rep(i, cnt - l) a += 'a';
+        s = a + s;
+    }
+
+    if (kaibun(s)) puts("Yes");
+    else puts("No");
+}

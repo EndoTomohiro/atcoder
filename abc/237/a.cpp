@@ -25,4 +25,10 @@ template<class T> void chmin(T& a, T b) {
     if (a > b) a = b;
 }
 
-int main() {}
+int main() {
+    ll n;
+    cin >> n;
+
+    if (INT32_MIN <= n && n <= INT32_MAX) puts("Yes");
+    else puts("No");
+}

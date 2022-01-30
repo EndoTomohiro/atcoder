@@ -25,4 +25,15 @@ template<class T> void chmin(T& a, T b) {
     if (a > b) a = b;
 }
 
-int main() {}
+int main() {
+    ll h, w;
+    cin >> h >> w;
+
+    vvl b(w, vl(h));
+    rep(i, h) rep(j, w) cin >> b[j][i];
+
+    rep(i, w) {
+        rep(j, h) cout << b[i][j] << ' ';
+        cout << endl;
+    }
+}

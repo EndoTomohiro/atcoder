@@ -25,4 +25,24 @@ template<class T> void chmin(T& a, T b) {
     if (a > b) a = b;
 }
 
-int main() {}
+int main() {
+    ll n;
+    cin >> n;
+
+    string s;
+    cin >> s;
+
+    vp vec(n + 1);
+    rep(i, n + 1) vec[i] = make_pair(0, i);
+    rep(i, n) {
+        if (s[i] == 'L') {
+            vec[i + 1].first = vec[i].first;
+            vec[i].first += n - i;
+        }
+        else vec[i + 1].first = vec[i].first + 1;
+    }
+
+    sort(all(vec));
+    rep(i, n + 1) cout << vec[i].second << ' ';
+    cout << endl;
+}
