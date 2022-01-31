@@ -10,7 +10,6 @@ using vvl = vector<vl>;
 using ql = queue<ll>;
 using ml = map<ll, ll>;
 using sl = set<ll>;
-using dl = deque<ll>;
 const double pi = 3.14159265359;
 const ll INF = 1000000000000000;
 const ll dif = 1000000007;
@@ -26,4 +25,15 @@ template<class T> void chmin(T& a, T b) {
     if (a > b) a = b;
 }
 
-int main() {}
+int main() {
+    ll a, b;
+    cin >> a >> b;
+
+    rep2(i, 10000) {
+        if (ll(i * 0.08) == a && ll(i * 0.1) == b) {
+            cout << i << endl;
+            return 0;
+        }
+    }
+    cout << -1 << endl;
+}
