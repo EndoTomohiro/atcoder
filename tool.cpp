@@ -27,10 +27,19 @@ template<class T> void chmin(T& a, T b) {
 }
 
 // 累乗
-ll myPow(ll x, ll n, ll m){
-  if (n == 0) return 1;
-  else if (n % 2 == 0) return myPow(x * x % m, n / 2, m);
-  else return x * myPow(x, n - 1, m) % m;
+ll myPow(ll x, ll n){
+    if (n == 0) return 1;
+    else if (n % 2 == 0) return myPow(x * x % dif, n / 2);
+    else return x * myPow(x, n - 1) % dif;
+}
+
+ll nCr(ll n, ll r) {
+    ll x = 1;
+    rep(i, r) x = x * (n - i) % dif;
+    ll y = 1;
+    rep2(i, r) y = y * i % dif;
+    ll ans = x * myPow(y, dif - 2) % dif;
+    return ans;
 }
 
 // 桁数
@@ -56,8 +65,7 @@ ll keta_sum(ll n) {
 // 10進数を2進数に変換
 ll binary(ll n){
     ll ans = 0;
-    for (ll i = 0; n > 0; i++)
-    {
+    for (ll i = 0; n > 0; i++) {
         ans += (n % 2) * pow(10, i);
         n /= 2;
     }
