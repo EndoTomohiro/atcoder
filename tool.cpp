@@ -83,6 +83,10 @@ int main() {
     ll num_c = c - '0';
     ll char_c = c - 'a';
 
+    // ll型をchar型に変換
+    ll m;
+    char c = '0' + char(m);
+
     // 切り上げ
     ll a, b;
     ll ceil = (a + b - 1) / b;
