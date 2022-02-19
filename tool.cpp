@@ -75,7 +75,7 @@ ll binary(ll n){
 int main() {
     // 小数点以下10桁表示
     double x;
-    cout << fixed << setprecision(11);
+    cout << fixed << setprecision(10);
     cout << x << endl;
 
     // char型をll型に変換
@@ -170,23 +170,4 @@ int main() {
     ll aandb = a & b;
     ll aorb = a | b;
     ll axorb = a ^ b;
-
 }
-
-
-/*
-#include <bits/stdc++.h>
-using namespace std;
-const double pi = 3.14159265359;
-const long long INF = 1000000000000000;
-#define rep(i, n) for (long long i = 0; i < (long long)(n); i++)
-#define rep2(i, s, n) for (long long i = (long long)(s); i < (long long)(n); i++)
-#define rep3(i, s, n) for (long long i = (long long)(n); i >= (long long)(s); i--)
-#define all(v) v.begin(), v.end()
-template<class T> void chmax(T& a, T b) {
-    if (a < b) a = b;
-}
-template<class T> void chmin(T& a, T b) {
-    if (a > b) a = b;
-}
-*/
