@@ -27,4 +27,25 @@ template<class T> void chmin(T& a, T b) {
     if (a > b) a = b;
 }
 
-int main() {}
+int main() {
+    ll n, m;
+    cin >> n >> m;
+    priority_queue<ll> que;
+    rep(i, n) {
+        ll a;
+        cin >> a;
+        que.push(a);
+    }
+    rep(i, m) {
+        ll v = que.top();
+        que.pop();
+        que.push(v / 2);
+    }
+    ll ans = 0;
+    rep(i, n) {
+        ll v = que.top();
+        que.pop();
+        ans += v;
+    }
+    cout << ans << endl;
+}
