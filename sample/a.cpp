@@ -6,6 +6,7 @@ using vl = vector<ll>;
 using vb = vector<bool>;
 using vp = vector<pl>;
 using vs = vector<string>;
+using vc = vector<char>;
 using vvl = vector<vl>;
 using ql = queue<ll>;
 using dl = deque<ll>;
