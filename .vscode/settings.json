@@ -26,6 +26,7 @@
         "unordered_set": "cpp",
         "valarray": "cpp",
         "vector": "cpp",
-        "ranges": "cpp"
+        "ranges": "cpp",
+        "tuple": "cpp"
     }
 }
