@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
-using namespace std;
 using ll = int64_t;
 using pl = pair<ll, ll>;
 using vl = vector<ll>;
 using vb = vector<bool>;
 using vp = vector<pl>;
 using vs = vector<string>;
+using vc = vector<char>;
 using vvl = vector<vl>;
 using ql = queue<ll>;
 using dl = deque<ll>;
