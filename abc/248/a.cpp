@@ -15,7 +15,7 @@ using ml = map<ll, ll>;
 using sl = set<ll>;
 const double pi = 3.14159265359;
 const ll INF = 1000000000000000;
-const ll dif = 998244353;
+const ll dif = 1000000007;
 #define rep(i, n) for (ll i = 0; i < (ll)(n); i++)
 #define rep2(i, n) for (ll i = 1; i <= (ll)(n); i++)
 #define rep3(i, s, n) for (ll i = (ll)(s); i < (ll)(n); i++)
@@ -28,4 +28,20 @@ template<class T> void chmin(T& a, T b) {
     if (a > b) a = b;
 }
 
-int main() {}
+int main() {
+    string s;
+    cin >> s;
+    rep(i, 10) {
+        bool ok = false;
+        rep(j, 9) {
+            if (s[j] - '0' == i) {
+                ok = true;
+                break;
+            }
+        }
+        if (!ok) {
+            cout << i << endl;
+            return 0;
+        }
+    }
+}

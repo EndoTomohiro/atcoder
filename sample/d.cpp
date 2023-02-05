@@ -15,7 +15,7 @@ using ml = map<ll, ll>;
 using sl = set<ll>;
 const double pi = 3.14159265359;
 const ll INF = 1000000000000000;
-const ll dif = 1000000007;
+const ll dif = 998244353;
 #define rep(i, n) for (ll i = 0; i < (ll)(n); i++)
 #define rep2(i, n) for (ll i = 1; i <= (ll)(n); i++)
 #define rep3(i, s, n) for (ll i = (ll)(s); i < (ll)(n); i++)
