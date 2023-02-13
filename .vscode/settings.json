@@ -28,6 +28,7 @@
         "vector": "cpp",
         "ranges": "cpp",
         "tuple": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "bitset": "cpp"
     }
 }
