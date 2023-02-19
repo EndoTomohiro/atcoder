@@ -24,7 +24,8 @@ template<class T> void chmin(T& a, T b) {
 // 幅優先探索
 // 入力：グラフ graph と、探索の始点 s
 // 出力：s から各頂点への最短距離を表す配列
-vl bfs(vvl graph, ll s) {
+vvl graph(100010);
+vl bfs(ll s) {
     ll n = graph.size(); // 頂点数
     vl dist(n, -1); // 全頂点を「未訪問」に初期化
     queue<ll> que;
@@ -68,7 +69,7 @@ int main() {
     }
 
     // 頂点０を始点としたBFS
-    vl dist = bfs(graph, 0);
+    vl dist = bfs(0);
 
     // 結果出力（各頂点の頂点０からの距離を見る）
     rep(v, n) cout << v << ": " << dist[v] << endl;

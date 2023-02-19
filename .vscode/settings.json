@@ -29,6 +29,7 @@
         "ranges": "cpp",
         "tuple": "cpp",
         "numeric": "cpp",
-        "bitset": "cpp"
+        "bitset": "cpp",
+        "queue": "cpp"
     }
 }
