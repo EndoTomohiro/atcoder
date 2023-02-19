@@ -8,7 +8,6 @@ using vp = vector<pl>;
 using vs = vector<string>;
 using vc = vector<char>;
 using vvl = vector<vl>;
-using ql = queue<ll>;
 using dl = deque<ll>;
 using pri = priority_queue<ll>;
 using ml = map<ll, ll>;

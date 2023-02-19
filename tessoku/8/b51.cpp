@@ -8,6 +8,7 @@ using vp = vector<pl>;
 using vs = vector<string>;
 using vc = vector<char>;
 using vvl = vector<vl>;
+using ql = queue<ll>;
 using dl = deque<ll>;
 using pri = priority_queue<ll>;
 using ml = map<ll, ll>;
@@ -27,4 +28,16 @@ template<class T> void chmin(T& a, T b) {
     if (a > b) a = b;
 }
 
-int main() {}
+int main() {
+    string s;
+    cin >> s;
+    dl que;
+    rep(i, s.size()) {
+        if (s[i] == '(') que.push_back(i + 1);
+        else {
+            ll v = que.back();
+            que.pop_back();
+            cout << v << ' ' << i + 1 << endl;
+        }
+    }
+}
