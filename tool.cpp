@@ -29,9 +29,13 @@ template<class T> void chmin(T& a, T b) {
 
 // 累乗
 ll myPow(ll x, ll n){
-    if (n == 0) return 1;
-    else if (n % 2 == 0) return myPow(x * x % dif, n / 2);
-    else return x * myPow(x, n - 1) % dif;
+    ll p = x, ans = 1;
+    rep(i, 60) {
+        ll wari = (1LL << i);
+        if ((b / wari) % 2 == 1) ans = ans * p % dif;
+        p = p * p % dif;
+    }
+    return ans;
 }
 
 ll nCr(ll n, ll r) {
