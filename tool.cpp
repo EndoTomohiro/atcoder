@@ -109,6 +109,29 @@ int main() {
     ll max_range = *max_element(all(vec));
     ll sum = accumulate(all(vec), ll(0));
 
+    // 配列の重複を削除
+    vl vec;
+    sort(all(vec));
+    vec.erase(unique(all(vec)), vec.end());
+
+    // 配列の要素数を変更
+    ll n;
+    vl vec;
+    vec.resize(n);
+
+    // 配列の中のnの個数
+    ll n;
+    vl vec;
+    ll c = count(all(vec), x);
+
+    // 配列の逆順
+    vl vec;
+    reverse(all(vec));
+
+    // 0~n-1の要素からなる配列
+    vl vec;
+    iota(all(vec), 0);
+
     // 二分探索
     vl vec;
     ll key;
@@ -128,21 +151,6 @@ int main() {
     string ans_mae = s.substr(l);
     // l文字目から長さrの部分文字列
     string ans_ato = s.substr(l, r);
-
-    // 配列の重複を削除
-    vl vec;
-    sort(all(vec));
-    vec.erase(unique(all(vec)), vec.end());
-
-    // 配列の要素数を変更
-    ll n;
-    vl vec;
-    vec.resize(n);
-
-    // 配列の中のnの個数
-    ll n;
-    vl vec;
-    ll c = count(all(vec), x);
 
     // 順序付き集合
     set<ll> st;
