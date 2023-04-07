@@ -27,10 +27,10 @@ template<class T> void chmin(T& a, T b) {
     if (a > b) a = b;
 }
 
-// 1 以上 N 以下の整数が素数かどうかを返す(計算量NloglogN)
-vb Eratosthenes(int N) {
+// 1 以上 N 以下の整数が素数かどうかを返す
+vector<bool> Eratosthenes(int N) {
     // テーブル
-    vb isprime(N+1, true);
+    vector<bool> isprime(N+1, true);
 
     // 1 は予めふるい落としておく
     isprime[1] = false;
@@ -52,10 +52,23 @@ vb Eratosthenes(int N) {
 
 
 int main() {
-    vb isprime = Eratosthenes(50);
+    ll n;
+    cin >> n;
 
-    for (int v = 2; v <= 50; ++v) {
-        cout << v << ": "
-             << (isprime[v] ? "prime" : "not") << endl;
+    vb isprime = Eratosthenes(1000000);
+    vl prime(0);
+    rep2(i, 1000000) if (isprime[i]) prime.push_back(i);
+    ll s = prime.size();
+    ll ans = 0, j = s - 1;
+    rep(i, s) {
+        ll p = prime[i];
+        ll q = prime[j];
+        while (i < j && p * q * q * q > n) {
+            j--;
+            q = prime[j];
+        }
+        if (i == j) break;
+        ans += j - i;
     }
+    cout << ans << endl;
 }

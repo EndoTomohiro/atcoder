@@ -27,35 +27,17 @@ template<class T> void chmin(T& a, T b) {
     if (a > b) a = b;
 }
 
-// 1 以上 N 以下の整数が素数かどうかを返す(計算量NloglogN)
-vb Eratosthenes(int N) {
-    // テーブル
-    vb isprime(N+1, true);
-
-    // 1 は予めふるい落としておく
-    isprime[1] = false;
-
-    // ふるい
-    for (int p = 2; p <= N; ++p) {
-        // すでに合成数であるものはスキップする
-        if (!isprime[p]) continue;
-
-        // p 以外の p の倍数から素数ラベルを剥奪
-        for (int q = p * 2; q <= N; q += p) {
-            isprime[q] = false;
-        }
-    }
-
-    // 1 以上 N 以下の整数が素数かどうか
-    return isprime;
-}
-
-
 int main() {
-    vb isprime = Eratosthenes(50);
-
-    for (int v = 2; v <= 50; ++v) {
-        cout << v << ": "
-             << (isprime[v] ? "prime" : "not") << endl;
+    ll h, w, r, c;
+    cin >> h >> w >> r >> c;
+    ll ans = 0;
+    if (h > 1) {
+        if (r == 1 || r == h) ans += 1;
+        else ans += 2;
     }
+    if (w > 1) {
+        if (c == 1 || c == w) ans += 1;
+        else ans += 2;
+    }
+    cout << ans << endl;
 }
