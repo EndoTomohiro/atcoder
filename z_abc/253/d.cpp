@@ -12,7 +12,6 @@ using dl = deque<ll>;
 using pri = priority_queue<ll>;
 using ml = map<ll, ll>;
 using sl = set<ll>;
-using msl = multiset<ll>;
 const double pi = 3.14159265359;
 const ll INF = 1000000000000000;
 const ll dif = 998244353;
@@ -28,4 +27,15 @@ template<class T> void chmin(T& a, T b) {
     if (a > b) a = b;
 }
 
-int main() {}
+int main() {
+    ll n, a, b;
+    cin >> n >> a >> b;
+
+    ll x = (a + a * (n / a)) * (n / a) / 2;
+    ll y = (b + b * (n / b)) * (n / b) / 2;
+    ll c = lcm(a, b);
+    ll z = (c + c * (n / c)) * (n / c) / 2;
+    ll t = (n + 1) * n / 2;
+    ll ans = t - (x + y - z);
+    cout << ans << endl;
+}
